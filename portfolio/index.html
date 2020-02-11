@@ -6,31 +6,68 @@
 <html>
   <head>
     <title>Scott's Portfolio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+      caption {
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-bottom: 8px;
+      }
+    </style>
+    <style>
+      table, th, td {
+        border: 1px solid #0d1f2d;
+        border-collapse: collapse;
+        padding: 5px 10x;
+        /* width: 90%; */
+        /* margin: auto; */
+        margin-left: 6%;
+        
+      }
+      tr{
+        height: 30px;
+      }
+      th {
+        background-color: #546a7b;
+        color: #f2eded;
+      }
+      tr:nth-child(odd){
+        background-color: #e4c3ad;
+      }
+    
+    </style>
+    <link href="styles/main.css" rel="stylesheet" type="text/css" /> 
+    <!--<link href="styles/teststyles.css" rel="stylesheet" type="text/css" />-->
+   
+    <style>
+header {
+  background-color: darkgray;
+}
+    </style>
   </head>
   <body>
     <header>
       <h1>Portfolio for Scott Stone</h1>
     </header>
 
-    <nav>
-      <hr />
+    <nav class="border">
+      <!-- <hr style="border: thin dotted red;"/> -->
       <!--I need to add links to projects.html, contact.html, and testimonials.html-->
-      <p>
-        <h1><a href="contact.html">Contact</a></h1>
-        <h1><a href="Projects.html">Project</a></h1>
-        <h1><a href="testimonials.html">Testimonials</a></h1>
-      </p>
-      <hr />
+      <p><a href="contact.html">Contact</a></p>
+        <p><a href="Projects.html">Project</a></p>
+        <p><a href="testimonials.html">Testimonials</a></p>
+        <div class="clear-float"></div>
+      <!-- <hr style="width: 50%; border: 2px solid blueviolet;" /> -->
     </nav>
 
     <section>
-      <article id="about">
+      <article class="border" id="about">
         <h2><em>About Me</em></h2>
-        <img src="images/selfie2.jpg" style='width:300px' alt="Portrait of Scott Stone"/>
+        <img src="images/selfie2.jpg" style='width:300px; margin-right: 2%' alt="Portrait of Scott Stone"/>
         <p>
           My name is Donald Scott Stone, though I go by <strong>Scott</strong>.
           I possess a bachelor's in Business with a concentration in Management
-          Information Systems. I multiple years experience focusing on data
+          Information Systems. I have multiple years experience focusing on data
           management, specifically focusing on data integration and ETL. My
           primary tool for ETL is <em>Informatica</em>.
         </p>
@@ -43,17 +80,22 @@
           directions to pursue a career in working on front end application
           development.
         </p>
+        <div class="clear-float"></div>
       </article>
       <article id="experience">
         <h2><em>Past Experience</em></h2>
-        <img src="images/experiences.jpg" style='width:300px' alt="Personal Experience"/>
+        <img src="images/experiences.jpg" style='width:300px;' alt="Personal Experience"/>
+        <div class="right-content">
         <table>
 <caption>Employment History</caption>
+<thead>
 <tr>
   <th>Years of Employment</th>
   <th>Title</th>
   <th>Company</th>
   </tr>
+</thead>
+  <tbody>
   <tr>
     <td>April 2019 - Present</td>
     <td>Delivery Driver</td>
@@ -69,12 +111,16 @@
         <td>Informatica Team Lead</td>
         <td>Bank of America</td>
         </tr>
+        </tbody>
           </table>
+        </div>
+          <div class="clear-float"></div>
       </article>
 
       <article id="hobbies">
         <h2><em>Hobbies</em></h2>
-        <img src="images/hobbies.jpg" style='width:300px' alt="Hobbies"/>
+        <img src="images/hobbies.jpg" style='width:300px;' alt="Hobbies"/>
+        <div class="right-content">
         <ul>
           <li>Authors</li>
           <ol>
@@ -102,11 +148,17 @@
                     <li>Running</li>
                     </ul>
                     </ul>
+                  </div>
+                    <div class="clear-float"></div>        
 
       </article>
     </section>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   </body>
-  <footer>
+
+    <footer>
     <hr />
     <p>&copy; 2020 Scott Stone. All rights reserved.</p>
   </footer>
