@@ -1,65 +1,157 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Home Page</title>
+
+<head>
+  <title>Contact</title>
   <link href="styles/restaurantStyle.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script type="text/javascript" src="scripts/contact.js"></script>
   <style>
     .required {
-    font-weight: bold;
-}
+      font-weight: bold;
+    }
+    label[for=fullName], [for=emailAddress]{
+      font-weight: bold;
+    }
   </style>
 </head>
-<header>
-  <h1><strong>Southern Comfort</strong></h1>
-</header>
-<nav>
-  <p>
-    <a href="Home.html">Home</a>
-    <a href="Menu.html">Menu</a>
-    <a href="Contact.html">Contact</a>
-  </p>
-  <hr />
-</nav>
+
 <body>
-    <form action="submit.html" method="POST">
-        <label for="Name" class="required">Name:</label>
-        <input type="text" id="Name" name="Name" required><br/><br/>
-        <label for="Email" class="required">Email:</label>
-        <input type="text" id="Email" name="Email" required><br/><br/>
-        <label for="Phone">Phone:</label>
-        <input type="text" id="Phone" name="Phone"><br/><br/>
-        <label for="contact">Reason for Inquiry</label>
-        <select id="contact" name="contact">
-            <option value="default"selected>Catering</option>
-            <option value="Private">Private Party</option>
-            <option value="Feedback">Feedback</option>
-            <option value="Other">Other</option>
-        </select><br/><br/>
-        <label for"infro">Additional Information</label>
-        <textarea id="info" name="info"</form></textarea><br/><br/>
-            <legend>Have you been to the restaurant?</legend><br />
-            <input type="radio" id="choice1" name="questionnaire" value="yes">
-            <label for="choice1">Yes</label><br />
-            <input type="radio" id="choice2" name="questionnaire" value="no">
-            <label for="choice2">No</label><br /><br/>
-            <legend>Best days to contact you: <check all that apply>
-                <input type="checkbox" id="Monday" name="Monday" value="Monday">
-                <label for="Monday">M</label>
-                <input type="checkbox" id="Tuesday" name="Tuesday" value="Tuesday">
-                <label for="Tuesday">T</label>
-                <input type="checkbox" id="Wednesday" name="Wednesday" value="Wednesday">
-                <label for="Wednesday">W</label> 
-                <input type="checkbox" id="Thursday" name="Thursday" value="Thursday">
-                <label for="Thursday">Th</label>
-                <input type="checkbox" id="Friday" name="Friday" value="Friday">
-                <label for="Friday">F</label>
-            </legend><br/>
-            <input type="submit" name="submit" value="submit">
-    </form><br/>
-    <hr/>
-      <p><p>255 S. Creek Rd., Charlotte, NC, 28202
-        <br>  (704)756-3388</br></p>
-    </footer>
+  <div class="container">
+
+    <header class="jumbotron">
+      <div class="container">
+        <h1><strong>Southern Comfort</strong></h1>
+        <div id="newsSlide" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              We're opening a new location!
+            </div>
+            <div class="carousel-item">
+              We're rolling out our seasonal menu, with special options for this season.
+            </div>
+            <div class="carousel-item">
+              The Drink of the Month is SG Special Brew.
+            </div>
+            <a class="carousel-control-prev" href="#newsSlide" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#newsSlide" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="pb-3">
+      <a class="btn badge-pill pb-0" href="Home.html"><i class="material-icons">home</i></a>
+      <a class="btn badge-pill" href="Menu.html">Menu</a>
+      <a class="btn badge-pill" href="Contact.html">Contact</a>
+    </nav>
+
+       
+<form name="contact-us-form">
+
+  <div class="form-group row">
+    <label for="fullName" class="col-sm-2 col-form-label">Name:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="fullName" name="fullName">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="emailAddress" class="col-sm-2 col-form-label">Email:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="emailAddress" name="emailAddress">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="phoneNumber" class="col-sm-2 col-form-label">Phone:</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="inquiry" class="col-sm-2 col-form-label">Reason for Inquiry:</label>
+    <div class="col-sm-10">
+      <select id="inquiry" name="inquiry" class="form-control">
+        <option value="catering" selected>Catering</option>
+        <option value="privateparty">Private Party</option>
+        <option value="feedback">Feedback</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label for="info" class="col-sm-2 col-form-label">Additional Information</label>
+    <div class="col-sm-10">
+      <textarea id="info" name="info" class="form-control"></textarea>
+    </div>
+  </div>
+
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2">Have you been to the restaurant?</legend>
+      <div class="col-sm-10">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="nope" name="beenToRestaurant" value="No">
+          <label class="form-check-label" for="nope">No</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" id="yup" name="beenToRestaurant" value="Yes">
+          <label class="form-check-label" for="yup">Yes</label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2">Best days to contact you:</legend>
+      <div class="col-sm-10">
+        <input class="form-check form-check-inline" type="checkbox" id="monday" name="bestDayContact" value="monday">
+        <label class="form-check-label" for="monday">M</label>
+        <input class="form-check form-check-inline" type="checkbox" id="tuesday" name="bestDayContact" value="tuesday">
+        <label class="form-check-label" for="tuesday">T</label>
+        <input class="form-check form-check-inline" type="checkbox" id="wednesday" name="bestDayContact" value="wednesday">
+        <label class="form-check-label" for="wednesday">W</label>
+        <input class="form-check form-check-inline" type="checkbox" id="thursday" name="bestDayContact" value="thursday">
+        <label class="form-check-label" for="thursday">Th</label>
+        <input class="form-check form-check-inline" type="checkbox" id="friday" name="bestDayContact" value="friday">
+        <label class="form-check-label" for="friday">F</label>
+      </div>
+    </div>
+  </fieldset>
+
+  <center><input type="submit" class="btn btn-secondary" value="Send Request" onclick="success()"></input></center>
+</form>
+
+  <footer>
+    <hr />
+    <p>255 S. Creek Rd., Charlotte, NC, 28202
+      <br> (704)756-3388</br></p>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+    </div>
+    <noscript>Oops! This web page is best viewed with JavaScript. Either you disabled your JavaScript or your browser
+      does not support JavaScript.</noscript>
 </body>
+
 </html>

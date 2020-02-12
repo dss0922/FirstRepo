@@ -2,36 +2,86 @@
 <!--
   Name: Scott Stone
   Date Created: 2/09/2020
-  Most recent revision:2/09/2020 -->
+  Most recent revision:2/11/2020 -->
 <html>
-  <head>
-    <title>Home Page</title>
+
+<head>
+  <title>Home Page</title>
   <link href="styles/restaurantStyle.css" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Sriracha&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<header>
-  <h1><strong>Southern Comfort</strong></h1>
-</header>
-<nav>
-  <p>
-    <a href="Home.html">Home</a>
-    <a href="Menu.html">Menu</a>
-    <a href="Contact.html">Contact</a>
-  </p>
-  <hr />
-</nav>
-  <body>
+
+<body>
+  <div class="container">
+
+    <header class="jumbotron">
+      <div class="container">
+        <h1><strong>Southern Comfort</strong></h1>
+        <div id="newsSlide" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+              We're opening a new location!
+            </div>
+            <div class="carousel-item">
+              We're rolling out our seasonal menu, with special options for this season.
+            </div>
+            <div class="carousel-item">
+              The Drink of the Month is SG Special Brew.
+            </div>
+            <a class="carousel-control-prev" href="#newsSlide" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#newsSlide" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav class="pb-3">
+      <a class="btn badge-pill pb-0" href="Home.html"><i class="material-icons">home</i></a>
+      <a class="btn badge-pill" href="Menu.html">Menu</a>
+      <a class="btn badge-pill" href="Contact.html">Contact</a>
+    </nav>
+
+    <figure>
+      <img src="./images/Dinner.jpg"
+        style='width:400px;height:150px;display:block; margin-right: auto; margin-left: auto' alt="Home Picture" />
+    </figure>
+
     <p>
-      <img src="./images/Dinner.jpg" style='width:400px;height:150px;display:block; margin-right: auto; margin-left: auto' alt="Home Picture"/>
+      Southern Comfort is the place where friends, families,and couples congregate to enjoy some of their favorite
+      southern foods. We offer local favorites such as <em>Momma's Meatloaf</em> and <em>That's MY Chicken-Pot-Pie</em>.
+      Come to this country kitchen setting and enjoy southern food the way it was intended along with any of the 12
+      brews
+      we have on tap.
     </p>
-    <p>
-      Southern Comfort is the place where friends, families,and  couples congregate to enjoy some of their favorite southern foods.  We offer local favorites such as <em>Momma's Meatloaf</em> and <em>That's MY Chicken-Pot-Pie</em>.  Come to this country kitchen setting and enjoy southern food the way it was intended along with any of the 12 brews we have on tap.
-    </p>
-    <footer>
+
+    <footer class="footer">
       <hr />
       <p>255 S. Creek Rd., Charlotte, NC, 28202
-      <br>  (704)756-3388</br>
+        <br> (704)756-3388</br>
       </p>
     </footer>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+    <noscript>Oops! This web page is best viewed with JavaScript. Either you disabled your JavaScript or your browser
+      does not support JavaScript.</noscript>
+  </div>
+</body>
 
 </html>
